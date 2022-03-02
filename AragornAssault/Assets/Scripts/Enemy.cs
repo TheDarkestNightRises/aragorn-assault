@@ -5,9 +5,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
-    // Start is called before the first frame update
+    [SerializeField] Transform parent;
     private void OnParticleCollision(GameObject other)
     {
+        Debug.Log($"{other.gameObject.name} Shoot {name}");
+        GameObject vfx = Instantiate(deathVFX, transform.position,Quaternion.identity);
+        vfx.transform.parent = parent;
         Destroy(gameObject);
     }
 

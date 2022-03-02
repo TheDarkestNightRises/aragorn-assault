@@ -293,6 +293,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8908586932002745755, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908586932002745755, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908586932002745755, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908586932002745755, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -303,6 +315,18 @@ PrefabInstance:
     - target: {fileID: 8908586932002745755, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118116068054265088, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118116068054265088, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118116068054265088, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9118116068054265088, guid: 0478b1e28fd9831458b0f051b9d2ad8b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
