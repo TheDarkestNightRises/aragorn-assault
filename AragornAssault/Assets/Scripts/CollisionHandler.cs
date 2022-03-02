@@ -8,16 +8,22 @@ public class CollisionHandler : MonoBehaviour
 {
 
     [SerializeField] float loadDelay = 1f;
+    [SerializeField] ParticleSystem crashVFX;
     private void OnTriggerEnter(Collider other)
     {
         StartCrashSequence();
-    
         Debug.Log($"{this.name} **Triggerd by** {other.gameObject.name}");
     }
 
     private void StartCrashSequence()
     {
+        crashVFX.Play();
         GetComponent<PlayerController>().enabled = false;
+        foreach (MeshRenderer meshInChild in GetComponentsInChildren<MeshRenderer>())
+            meshInChild.enabled = false;
+
+        foreach (Collider colliderInChild in GetComponentsInChildren<Collider>())
+            colliderInChild.enabled = false;
         Invoke("ReloadLevel", loadDelay);
     }
 
