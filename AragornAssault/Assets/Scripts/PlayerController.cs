@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction fire;
     [SerializeField] float controlSpeed;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
@@ -19,11 +21,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
+        fire.Enable();
         movement.Enable();
     }
 
     private void OnDisable()
     {
+        fire.Disable();
         movement.Disable();
     }
 
@@ -33,6 +37,15 @@ public class PlayerController : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
+    }
+
+    private void ProcessFiring()
+    {
+        if (fire.ReadValue<float>() > 0.5f)
+        {
+            Debug.Log("Im firing");
+        }
     }
 
     private void ProcessTranslation()
