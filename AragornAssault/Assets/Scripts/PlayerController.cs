@@ -5,16 +5,26 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
+    [Header("General Setup Settings")]
+    [Tooltip("Input for the new manager system for movement")]
     [SerializeField] InputAction movement;
+    [Tooltip("Input for the new manager system for fire")]
     [SerializeField] InputAction fire;
-    [SerializeField] float controlSpeed;
-    [SerializeField] float xRange = 10f;
-    [SerializeField] float yRange = 7f;
-    // Start is called before the first frame update
-    [SerializeField] float pitchFactor = -2f;
+
+    [Header("Array for lasers")]
+    [SerializeField] GameObject[] lasers;
+
+    [SerializeField] float controlSpeed = 20f;
+    [SerializeField] float xRange = 15f;
+    [SerializeField] float yRange = 10f;
+
+    [Header("Screen position based tuning")]
+    [SerializeField] float positionYawFactor = 2f;
+    [SerializeField] float positionPitchFactor = -2f;
+
+    [Header("Player input based tuning")]
     [SerializeField] float controlPitchFactor = -15f;
-    [SerializeField] float controlYawFactor = 2f;
-    [SerializeField] float controlRollFactor = 5f;
+    [SerializeField] float controlRollFactor = -20f;
 
     float horizontalThrow;
     float verticalThrow;
@@ -44,7 +54,21 @@ public class PlayerController : MonoBehaviour
     {
         if (fire.ReadValue<float>() > 0.5f)
         {
-            Debug.Log("Im firing");
+            SetLaserActive(true);
+        }
+        else
+        {
+            SetLaserActive(false);
+        }
+    }
+
+
+    private void SetLaserActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emmisionModule = laser.GetComponent<ParticleSystem>().emission;
+            emmisionModule.enabled = isActive;
         }
     }
 
@@ -66,11 +90,11 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessRotation()
     {
-        float pitchDueToPosition = transform.localPosition.y * pitchFactor;
-        float pitchDueToControlThrow = +verticalThrow * controlPitchFactor;
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = verticalThrow * controlPitchFactor;
         float pitch = pitchDueToPosition + pitchDueToControlThrow;
 
-        float yaw = transform.localPosition.x * controlYawFactor;
+        float yaw = transform.localPosition.x * positionYawFactor;
         float roll = horizontalThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
