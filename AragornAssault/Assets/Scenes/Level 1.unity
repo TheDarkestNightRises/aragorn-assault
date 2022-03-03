@@ -1530,6 +1530,10 @@ PrefabInstance:
       propertyPath: volumeTrigger
       value: 
       objectReference: {fileID: 1636784854}
+    - target: {fileID: 1636784857, guid: 886ee8a19ecbd9f41a57df4bfe0e7808, type: 3}
+      propertyPath: field of view
+      value: 87
+      objectReference: {fileID: 0}
     - target: {fileID: 8262380330015453076, guid: 886ee8a19ecbd9f41a57df4bfe0e7808, type: 3}
       propertyPath: m_RootOrder
       value: 11
