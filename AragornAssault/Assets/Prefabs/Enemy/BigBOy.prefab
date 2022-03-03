@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4552536853847691186}
   - component: {fileID: 1786006470528580472}
   - component: {fileID: 2079920311562987866}
+  - component: {fileID: -4725346873594282936}
   m_Layer: 0
   m_Name: BigBOy
   m_TagString: Untagged
@@ -97,9 +98,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 1228284718865961572, guid: 8f34856e652d71446b3431687741bd2f, type: 3}
   hitVFX: {fileID: 1228284718865961572, guid: 2dc159892d59fe9448048ccd2206793e, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 100
   hitPoints: 10
+--- !u!65 &-4725346873594282936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272985768442993325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0969853, y: 6.645025, z: 10.620745}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &599551349727402907
 GameObject:
   m_ObjectHideFlags: 0

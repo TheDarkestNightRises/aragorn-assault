@@ -1156,6 +1156,7 @@ GameObject:
   - component: {fileID: 6693691649970614573}
   - component: {fileID: 6683710611988509611}
   - component: {fileID: 1128321019}
+  - component: {fileID: 2374115780230621993}
   m_Layer: 0
   m_Name: TheBee
   m_TagString: Untagged
@@ -1241,9 +1242,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 1228284718865961572, guid: 8f34856e652d71446b3431687741bd2f, type: 3}
   hitVFX: {fileID: 1228284718865961572, guid: 2dc159892d59fe9448048ccd2206793e, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 20
   hitPoints: 5
+--- !u!65 &2374115780230621993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671382012101072637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.228247, y: 4.267086, z: 11.603618}
+  m_Center: {x: 0, y: -0.0000029802322, z: 0}
 --- !u!1 &6845169519788289351
 GameObject:
   m_ObjectHideFlags: 0
