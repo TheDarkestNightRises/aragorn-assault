@@ -2,7 +2,7 @@
 
 # Aragorn Assault 🚀
 
-A rail way shooter gane
+A rail way shooter game
 
 ## Features
 - Control your space ships
