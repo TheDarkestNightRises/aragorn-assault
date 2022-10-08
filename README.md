@@ -2,7 +2,7 @@
 
 # Aragorn Assault 🚀
 
-A rail way shooter featuring space space ships in mars
+A rail way shooter gane
 
 ## Features
 - Control your space ships
