@@ -1,3 +1,21 @@
-# AragornAssault
-Aragorn assault ,a game made in Unity.
-You can pilot a space ship and shoot at other enemies
+
+
+# Aragorn Assault 🚀
+
+A rail way shooter featuring space space ships in mars
+
+## Features
+- Control your space ships
+- Shoot waves of enemies
+- Explore mars and its beauties
+
+## Tech Stack
+
+**GameEngine:** Unity
+
+## Gameplay Screenshots
+
+
+
+
+
